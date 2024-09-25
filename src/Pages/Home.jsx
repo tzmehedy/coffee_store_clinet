@@ -32,7 +32,7 @@ const Home = () => {
           }}
         >
           <div className="w-1/2"></div>
-          <div className="w-1/2 mr-5 space-y-4">
+          <div className="w-1/2 mr-5 sm:space-y-2 md:space-y-4">
             <h1 className="text-3xl font-bold">
               Would you like a Cup of Delicious Coffee?
             </h1>
@@ -48,7 +48,6 @@ const Home = () => {
         </div>
 
         {/* About Coffee */}
-
         <div className="bg-[#ECEAE3] flex justify-center p-16">
           <div className="flex flex-col md:flex-row justify-between gap-5">
             <div className="text-[#331A15]">
@@ -107,7 +106,7 @@ const Home = () => {
                 Follow Us Instagram
               </h1>
 
-              <div className="grid md:grid-cols-4 mt-16 gap-5">
+              <div className="grid grid-cols-2 md:grid-cols-4 mt-16 gap-5">
                 <img src={followImg1} alt="" />
                 <img src={followImg2} alt="" />
                 <img src={followImg3} alt="" />
