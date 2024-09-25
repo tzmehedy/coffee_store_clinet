@@ -3,8 +3,14 @@ import icon1 from '../assets/images/icons/1.png'
 import icon2 from '../assets/images/icons/2.png'
 import icon3 from '../assets/images/icons/3.png'
 import icon4 from '../assets/images/icons/4.png'
-import { Link } from 'react-router-dom'
+import { Link, useLoaderData } from 'react-router-dom'
+import CoffeeCard from '../Components/CoffeeCard'
 const Home = () => {
+
+  const coffees = useLoaderData()
+
+
+
     return (
       <div className="">
         {/* Hero Section */}
@@ -35,7 +41,7 @@ const Home = () => {
         {/* About Coffee */}
 
         <div className="bg-[#ECEAE3] flex justify-center p-16">
-          <div className="flex justify-between gap-5">
+          <div className="flex flex-col md:flex-row justify-between gap-5">
             <div className="text-[#331A15]">
               <img src={icon1} alt="" />
               <h1 className="font-bold">Awesome Aroma</h1>
@@ -75,8 +81,14 @@ const Home = () => {
               Our Popular Products
             </h1>
             <button className="bg-[#E3B577]  px-3 py-2 text-white font-bold border-2 border-[#331A15]">
-              <Link to={'/addCoffee'}>Add Coffee</Link>
+              <Link to={"/addCoffee"}>Add Coffee</Link>
             </button>
+          </div>
+
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-5 mt-10'>
+            {coffees.map((coffee) => (
+              <CoffeeCard key={coffee._id} coffee={coffee}></CoffeeCard>
+            ))}
           </div>
         </div>
       </div>

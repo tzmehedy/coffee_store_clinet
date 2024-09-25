@@ -1,5 +1,37 @@
 
 const AddCoffee = () => {
+  const handelAddCoffee = (e) =>{
+    e.preventDefault()
+    const form = e.target
+    
+    const name = form.name.value
+    const chefName = form.chefName.value
+    const supplier = form.supplier.value
+    const taste = form.taste.value
+    const category = form.category.value
+    const details = form.details.value
+    const photo = form.photo.value
+
+    const newCoffees = {name, chefName, supplier, taste, category, details, photo}
+    
+    fetch("http://localhost:5000/coffees",{
+      method: 'POST',
+      headers:{
+        'content-type':'application/json'
+      },
+      body: JSON.stringify(newCoffees)
+
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      });
+
+
+  }
+
+
+
     return (
       <div className="bg-[#F4F3F0] md:p-20 ">
         <div className="text-center space-y-5 text-[#331A15]">
@@ -11,7 +43,7 @@ const AddCoffee = () => {
             distribution of letters, as opposed to using Content here.
           </p>
         </div>
-        <form className="text-[#331A15]">
+        <form onSubmit={handelAddCoffee} className="text-[#331A15]">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             <div className="">
               <p className="font-bold">Name</p>
