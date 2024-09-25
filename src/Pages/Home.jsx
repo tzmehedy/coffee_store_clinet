@@ -5,6 +5,15 @@ import icon3 from '../assets/images/icons/3.png'
 import icon4 from '../assets/images/icons/4.png'
 import { Link, useLoaderData } from 'react-router-dom'
 import CoffeeCard from '../Components/CoffeeCard'
+
+import followImg1 from '../assets/images/cups/Rectangle 10.png'
+import followImg2 from '../assets/images/cups/Rectangle 11.png'
+import followImg3 from '../assets/images/cups/Rectangle 12.png'
+import followImg4 from '../assets/images/cups/Rectangle 13.png'
+import followImg5 from '../assets/images/cups/Rectangle 14.png'
+import followImg6 from '../assets/images/cups/Rectangle 15.png'
+import followImg7 from '../assets/images/cups/Rectangle 16.png'
+import followImg8 from '../assets/images/cups/Rectangle 9.png'
 const Home = () => {
 
   const coffees = useLoaderData()
@@ -73,7 +82,7 @@ const Home = () => {
         </div>
 
         {/* Products */}
-        <div>
+        <div className='mt-20'>
           <div className="text-center space-y-5">
             <span>--- Sip & Savor ---</span>
 
@@ -85,10 +94,30 @@ const Home = () => {
             </button>
           </div>
 
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-5 mt-10'>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-10">
             {coffees.map((coffee) => (
               <CoffeeCard key={coffee._id} coffee={coffee}></CoffeeCard>
             ))}
+          </div>
+
+          <div className="mt-20">
+            <div className="text-center">
+              <span className="text-[#1B1A1A]">Follow Us Now</span>
+              <h1 className="text-[#331A15] font-bold text-3xl">
+                Follow Us Instagram
+              </h1>
+
+              <div className="grid md:grid-cols-4 mt-16 gap-5">
+                <img src={followImg1} alt="" />
+                <img src={followImg2} alt="" />
+                <img src={followImg3} alt="" />
+                <img src={followImg4} alt="" />
+                <img src={followImg5} alt="" />
+                <img src={followImg6} alt="" />
+                <img src={followImg7} alt="" />
+                <img src={followImg8} alt="" />
+              </div>
+            </div>
           </div>
         </div>
       </div>

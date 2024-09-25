@@ -5,7 +5,7 @@ const CoffeeCard = ({coffee}) => {
 
     return (
       <div>
-        <div className="card card-side bg-base-100 shadow-xl">
+        <div className="flex bg-base-100 shadow-xl">
           <figure>
             <img src={photo} />
           </figure>
