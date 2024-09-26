@@ -81,14 +81,14 @@ const Home = () => {
         </div>
 
         {/* Products */}
-        <div className='mt-20'>
+        <div className="mt-20">
           <div className="text-center space-y-5">
             <span>--- Sip & Savor ---</span>
 
             <h1 className="text-5xl font-bold text-[#331A15]">
               Our Popular Products
             </h1>
-            <button className="bg-[#E3B577]  px-3 py-2 text-white font-bold border-2 border-[#331A15]">
+            <button className="bg-[#E3B577]  px-3 py-2 text-[#331A15] font-bold border-2 border-[#331A15]">
               <Link to={"/addCoffee"}>Add Coffee</Link>
             </button>
           </div>

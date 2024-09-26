@@ -1,6 +1,10 @@
+import { FaEye } from "react-icons/fa";
+import { MdDelete, MdEdit } from "react-icons/md";
+import { Link } from "react-router-dom";
+
 const CoffeeCard = ({coffee}) => {
 
-    const { name, chefName, supplier, taste, category, details, photo } =
+    const {_id, name, chefName, supplier, taste, category, details, photo } =
       coffee;
 
     return (
@@ -16,10 +20,16 @@ const CoffeeCard = ({coffee}) => {
               <p>Price: $90</p>
             </div>
             <div className=" justify-center">
-              <div className="join join-vertical">
-                <button className="btn join-item">Button</button>
-                <button className="btn join-item">Button</button>
-                <button className="btn join-item">Button</button>
+              <div className="join join-vertical space-y-3">
+                <Link className="btn join-item">
+                  <FaEye className="text-green-800" />
+                </Link>
+                <Link className="btn join-item ">
+                  <MdDelete className="text-red-800" />
+                </Link>
+                <Link to={`/updateCoffee/${_id}`} className="btn join-item">
+                  <MdEdit className="text-yellow-800"/>
+                </Link>
               </div>
             </div>
           </div>
