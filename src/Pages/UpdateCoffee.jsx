@@ -118,7 +118,7 @@ const UpdateCoffee = () => {
                   type="text"
                   name="details"
                   id=""
-                  defaultValue={coffee.category}
+                  defaultValue={coffee.details}
                 />
               </div>
             </div>
@@ -129,7 +129,7 @@ const UpdateCoffee = () => {
                 type="text"
                 name="photo"
                 id=""
-                defaultValue={coffee.category}
+                defaultValue={coffee.photo}
               />
             </div>
             <button className="bg-[#D2B48C] text-[#331A15] font-bold w-full mt-7 py-2">

@@ -53,7 +53,7 @@ const CoffeeCard = ({ coffee, coffees, setCoffees }) => {
           </div>
           <div className=" justify-center">
             <div className="join join-vertical space-y-3">
-              <Link className="btn join-item">
+              <Link to={`/coffeedetails/${_id}`} className="btn join-item">
                 <FaEye className="text-green-800" />
               </Link>
               <Link
