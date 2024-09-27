@@ -1,4 +1,5 @@
 import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const UpdateCoffee = () => {
     const coffee = useLoaderData()
@@ -34,7 +35,15 @@ const UpdateCoffee = () => {
         })
           .then((res) => res.json)
           .then((data) => {
-            console.log(data);
+            console.log(data)
+            Swal.fire({
+              title: "Success!",
+              text: "Successfully Update the coffee",
+              icon: "success",
+              confirmButtonText: "Ok",
+            });
+
+
           });
 
     }

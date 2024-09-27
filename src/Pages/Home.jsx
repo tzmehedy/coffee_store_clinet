@@ -14,9 +14,12 @@ import followImg5 from '../assets/images/cups/Rectangle 14.png'
 import followImg6 from '../assets/images/cups/Rectangle 15.png'
 import followImg7 from '../assets/images/cups/Rectangle 16.png'
 import followImg8 from '../assets/images/cups/Rectangle 9.png'
+import { useState } from 'react'
 const Home = () => {
 
-  const coffees = useLoaderData()
+  const coffeesData = useLoaderData()
+
+  const [coffees, setCoffees] = useState(coffeesData)
 
 
 
@@ -95,7 +98,12 @@ const Home = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-10">
             {coffees.map((coffee) => (
-              <CoffeeCard key={coffee._id} coffee={coffee}></CoffeeCard>
+              <CoffeeCard
+                key={coffee._id}
+                coffee={coffee}
+                coffees={coffees}
+                setCoffees={setCoffees}
+              ></CoffeeCard>
             ))}
           </div>
 
